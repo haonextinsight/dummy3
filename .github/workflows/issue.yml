@@ -1,8 +1,8 @@
 name: Issue test
 on: [issues, workflow_dispatch]
 jobs:
-    print:
+    output-info:
         runs-on: ubuntu-latest
         steps:
             - name: Print issue details
-              run: echo "${{toJSON(github.head_ref)}}"
+              run: echo "${{toJSON(github.event)}}"
