@@ -9,9 +9,9 @@ jobs:
             - name: Install dependencies
               uses: npm ci
             - name: Lint project
-              uses: npm run lint
+              uses: npm lint
             - name: Run test
-              uses: npm run test
+              uses: npm test
     build:
         runs-on: ubuntu-latest
         needs: lint_test
